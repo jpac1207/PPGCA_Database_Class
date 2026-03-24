@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:18.3
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+
+  pgadmin:
+    image: dpage/pgadmin4:9.13.0
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "ppgca@ifma.com"
+      PGADMIN_DEFAULT_PASSWORD: "ppgca"
+    ports:
+      - 8080:80
+    volumes:
+      - ./pgadmin/servers.json:/pgadmin4/servers.json
+    depends_on:
+      - db
