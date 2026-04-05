@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql
 
   pgadmin:
     image: dpage/pgadmin4:9.13.0
@@ -21,3 +23,7 @@ services:
       - ./pgadmin/servers.json:/pgadmin4/servers.json
     depends_on:
       - db
+
+volumes:
+  postgres_data:
+    driver: local

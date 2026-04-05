@@ -15,3 +15,8 @@ PostgreSQL was the choosen engine to work on practical examples. It's possible t
 
 To make the test environment as reproducible as possible, the docker images used on the containers are using fixed tags.
 
+#### Commands
+
+- Start a postgres instance and a pgadmin client: `make start-postgres-and-client`
+- Stop both containers: the database instance and the pdadmin client (keeping the database volume): `make stop-postgres-and-client`
+- Stop both containers deleting the database volume (could be used to delete the volume at any time): `make stop-postgres-and-client-and-remove-volume`

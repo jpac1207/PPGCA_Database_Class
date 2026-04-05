@@ -3,3 +3,6 @@ start-postgres-and-client:
 
 stop-postgres-and-client:
 	docker compose -f postgres_compose.yml down
+
+stop-postgres-and-client-and-remove-volume:
+	docker compose -f postgres_compose.yml down -v
