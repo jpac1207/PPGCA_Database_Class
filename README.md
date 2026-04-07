@@ -2,7 +2,7 @@
 
 ## Repo from Database class
 
-This repository is being developed as a collection of useful code and tools related to the database class from PPGCA (Programa de Pŕos Graduação em Computação Aplicada) from the IFMA. (Instituto Federal do Maranhão).
+This repository is being developed as a collection of useful code and tools related to the database class from PPGCA (Programa de Pós Graduação em Computação Aplicada) from the IFMA. (Instituto Federal do Maranhão).
 
 ### Setup
 
@@ -20,3 +20,11 @@ To make the test environment as reproducible as possible, the docker images used
 - Start a postgres instance and a pgadmin client: `make start-postgres-and-client`
 - Stop both containers: the database instance and the pdadmin client (keeping the database volume): `make stop-postgres-and-client`
 - Stop both containers deleting the database volume (could be used to delete the volume at any time): `make stop-postgres-and-client-and-remove-volume`
+
+#### pgAdmin
+
+The client named as pgAdmin requires its own user and password to do the authentication. For now, this repo uses: `ppgca@ifma.com` as the default email account and `ppgca` as the default password.
+
+#### PostgreSQL
+
+The instance could be accessed by its default credentials: `postgres` for both the user and the password.
