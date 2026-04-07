@@ -5,5 +5,5 @@ CREATE TABLE
         dept_name varchar(20),
         salary numeric(8, 2),
         PRIMARY KEY (id),
-        FOREIGN KEY (dept_name) REFERENCES course
+        FOREIGN KEY (dept_name) REFERENCES department
     );
