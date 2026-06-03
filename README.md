@@ -28,3 +28,20 @@ The client named as pgAdmin requires its own user and password to do the authent
 #### PostgreSQL
 
 The instance could be accessed by its default credentials: `postgres` for both the user and the password.
+
+### NoSQL Databases
+
+MongoDB was the choosen database to work in the practical examples.
+
+#### Commands
+
+- Start a MongoDB instance and a mongo-express client: `make start-mongo-and-client`
+- Stop both containers: the database instance and the mongo-express client: `make stop-mongo-and-client`
+
+#### Mongo-express
+
+The client named as mongo-express requires its own user and password to do the authentication. For now, this repo uses: `mongoexpressuser` as the default user and `mongoexpresspass` as the default password.
+
+#### Mongo
+
+The instance could be accessed by its default credentials: `mongo` for the user and `mongo_pwd` for the password.
